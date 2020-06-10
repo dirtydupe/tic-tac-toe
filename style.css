@@ -1,8 +1,13 @@
+.playerForm {
+    margin: 40px 10px 10px 10px;
+}
+
 .playGrid {
+    margin: 10px 10px 10px 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 600px;
-    width: 600px;
+    height: 400px;
+    width: 400px;
 }
 
 .gameCell {

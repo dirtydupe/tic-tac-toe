@@ -1,3 +1,5 @@
+let activePlayer = "PLAYER 1";
+
 const PlayerFactory = (name, player) => 
 {
     function getName() 
@@ -17,24 +19,33 @@ const PlayerFactory = (name, player) =>
 };
 
 // TEST
-const foo = (player) => {
-    console.log("TEST");
+const foo = () => {
+    console.log(activePlayer);
 };
+
+const GameCellFactory = (index) =>
+{
+    function getIndex()
+    {
+        return index;
+    }
+}
 
 const GameBoardFactory = () => 
 {
-    let gameBoard = ["", "", "", "", "", "", "", "", ""];
+    let gameBoard = [];
 
     function render()
     {
         let gameContainer = document.querySelector(".playGrid");
 
-        for (let i = 0; i < gameBoard.length; i++) 
+        for (let i = 0; i < 9; i++) 
         {
             let gameCell = document.createElement("div");
             gameCell.classList.add("gameCell");
             gameCell.addEventListener("click", foo);
             gameContainer.append(gameCell);
+            gameBoard.push(GameCellFactory(i));
         }
     }
 
