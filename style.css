@@ -1,0 +1,11 @@
+.playGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 600px;
+    width: 600px;
+}
+
+.gameCell {
+    border: solid black 1px;
+}
+
